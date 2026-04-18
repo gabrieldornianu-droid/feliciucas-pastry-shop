@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliciuca — Patiserie artizanală &amp; Mici bucurii</title>
+  <meta name="description" content="Un atelier de patiserie boutique care face torturi, biscuiți și limonade de casă chiar în inima orașului." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Swiper CSS (MIT) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='85'>🧁</text></svg>" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Flag JS availability before first paint — reveal animations depend on this -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__brand" aria-label="Feliciuca – acasă">
+        <span class="nav__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 20c0-4 3.6-8 8-8s8 4 8 8" />
+            <path d="M6 20h20l-1.5 5a2 2 0 0 1-2 1.5H9.5a2 2 0 0 1-2-1.5L6 20Z" />
+            <path d="M16 12V8" />
+            <circle cx="16" cy="6.5" r="1.4" />
+          </svg>
+        </span>
+        <span class="nav__name">Feliciuca</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Navigație principală">
+        <a href="index.html" class="nav__link is-active">Acasă</a>
+        <a href="menu.html" class="nav__link">Meniu</a>
+        <a href="#gallery" class="nav__link">Galerie</a>
+        <a href="#visit" class="nav__link">Vizitează</a>
+      </nav>
+
+      <a href="menu.html" class="btn btn--primary nav__cta">
+        <span>Vezi meniul</span>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Deschide meniul" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__image" style="background-image:url('https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=2400&auto=format&fit=crop')"></div>
+      <div class="hero__gradient"></div>
+      <div class="orb orb--1"></div>
+      <div class="orb orb--2"></div>
+      <div class="orb orb--3"></div>
+    </div>
+
+    <div class="container hero__inner">
+      <p class="hero__eyebrow" data-reveal>
+        <span class="dot"></span> Făcute de mână, în serii mici, din 2019
+      </p>
+
+      <h1 class="hero__title" data-reveal>
+        <span class="line">Clipe mărunte,</span>
+        <span class="line"><em>făcute</em> dulce.</span>
+      </h1>
+
+      <p class="hero__lede" data-reveal>
+        Feliciuca este un atelier de patiserie de cartier — unt topit,
+        dimineți fără grabă și prăjituri din acelea despre care le scrii
+        prietenilor.
+      </p>
+
+      <div class="hero__cta" data-reveal>
+        <a href="menu.html" class="btn btn--primary btn--lg">
+          <span>Explorează meniul</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+        </a>
+        <a href="#about" class="btn btn--ghost btn--lg">Povestea noastră</a>
+      </div>
+
+      <div class="hero__meta" data-reveal>
+        <div class="hero__stat">
+          <span class="hero__stat-num">42+</span>
+          <span class="hero__stat-label">Rețete de sezon</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">6:00</span>
+          <span class="hero__stat-label">Proaspete zilnic</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">100%</span>
+          <span class="hero__stat-label">Unt adevărat, mereu</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="hero__scroll" aria-label="Derulează la secțiunea despre noi">
+      <span class="hero__scroll-line"></span>
+      <span class="hero__scroll-label">derulează</span>
+    </a>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>✿ biscuiți moi ca untul</span><span>·</span>
+      <span>✿ torturi în straturi</span><span>·</span>
+      <span>✿ limonade de casă</span><span>·</span>
+      <span>✿ tarte de sezon</span><span>·</span>
+      <span>✿ bucurii mărunte</span><span>·</span>
+      <span>✿ biscuiți moi ca untul</span><span>·</span>
+      <span>✿ torturi în straturi</span><span>·</span>
+      <span>✿ limonade de casă</span><span>·</span>
+      <span>✿ tarte de sezon</span><span>·</span>
+      <span>✿ bucurii mărunte</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="container about__grid">
+      <div class="about__media" data-reveal>
+        <div class="about__image about__image--1" style="background-image:url('https://images.unsplash.com/photo-1558326567-98ae2405596b?q=80&w=1200&auto=format&fit=crop')"></div>
+        <div class="about__image about__image--2" style="background-image:url('https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=1200&auto=format&fit=crop')"></div>
+        <div class="about__badge">
+          <svg viewBox="0 0 100 100" width="120" height="120">
+            <defs>
+              <path id="circlePath" d="M 50,50 m -36,0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0"/>
+            </defs>
+            <text font-family="Inter, sans-serif" font-size="10" font-weight="600" letter-spacing="2" fill="currentColor">
+              <textPath href="#circlePath">SERIE MICĂ · PROASPĂT ZILNIC · FĂCUT CU DRAG · </textPath>
+            </text>
+          </svg>
+          <span class="about__badge-center">★</span>
+        </div>
+      </div>
+
+      <div class="about__copy">
+        <p class="section__eyebrow" data-reveal>Povestea noastră</p>
+        <h2 class="section__title" data-reveal>
+          O cofetărie mică, cu <em>o poftă mare de dulce.</em>
+        </h2>
+        <p class="about__text" data-reveal>
+          Feliciuca a început într-o bucătărie plină de soare, cu trei tăvi,
+          un mixer puțin șubred și o bunică foarte insistentă. Astăzi e un
+          atelier de cartier unde coacem în serii mici, folosim unt care
+          chiar are gust de unt și tratăm fiecare biscuite ca pe un mic cadou.
+        </p>
+        <p class="about__text" data-reveal>
+          Credem că patiseria trebuie să fie cea mai frumoasă parte a zilei —
+          marginea de după-amiază care se simte puțin mai blândă, puțin mai
+          dulce.
+        </p>
+
+        <ul class="about__list" data-reveal>
+          <li><span>01</span> Mese pudrate cu făină, mereu</li>
+          <li><span>02</span> Fructe de sezon, locale când se poate</li>
+          <li><span>03</span> Fără compromisuri, doar bombonele</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="features">
+    <div class="container">
+      <header class="features__header">
+        <p class="section__eyebrow" data-reveal>De ce Feliciuca</p>
+        <h2 class="section__title section__title--center" data-reveal>
+          Detalii mici, <em>făcute cu grijă.</em>
+        </h2>
+      </header>
+
+      <div class="features__grid">
+        <article class="feature" data-reveal>
+          <div class="feature__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 9.5 8.5 3 9l5 4.5L6.5 21 12 17.5 17.5 21 16 13.5 21 9l-6.5-.5L12 2Z"/></svg>
+          </div>
+          <h3 class="feature__title">Făcute zilnic, de mână</h3>
+          <p class="feature__text">Fiecare dulce e modelat, umplut și finisat cu mâna, în bucătăria noastră mică, în fiecare dimineață înainte de răsărit.</p>
+        </article>
+
+        <article class="feature" data-reveal>
+          <div class="feature__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c5 0 8 4 8 9a8 8 0 1 1-16 0c0-5 3-9 8-9Z"/><path d="M12 3v18"/></svg>
+          </div>
+          <h3 class="feature__title">Ingrediente adevărate</h3>
+          <p class="feature__text">Folosim untul cel bun. Ciocolată dintr-o singură origine. Vanilie care costă puțin mai mult fiindcă are gust de mult mai mult.</p>
+        </article>
+
+        <article class="feature" data-reveal>
+          <div class="feature__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg>
+          </div>
+          <h3 class="feature__title">Drăgălașe cu intenție</h3>
+          <p class="feature__text">Fiecare bucățică e un mic gest de bucurie — așezată, decorată și împachetată astfel încât să te facă să zâmbești înainte să guști.</p>
+        </article>
+
+        <article class="feature" data-reveal>
+          <div class="feature__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/></svg>
+          </div>
+          <h3 class="feature__title">De împărțit cu cei dragi</h3>
+          <p class="feature__text">Cutii cadou, torturi personalizate, surprize de zi de naștere — spune-ne povestea și o coacem într-un dulce de neuitat.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <header class="gallery__header">
+        <div>
+          <p class="section__eyebrow" data-reveal>În vitrină</p>
+          <h2 class="section__title" data-reveal>O privire <em>înăuntru.</em></h2>
+        </div>
+        <p class="gallery__note" data-reveal>
+          Răsfoiește preferatele săptămânii — de la torturi cu petale de
+          trandafir până la biscuiții care s-au terminat de două ori ieri.
+        </p>
+      </header>
+    </div>
+
+    <div class="gallery__swiper swiper" data-reveal>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide gallery__slide"><div class="gallery__image" style="background-image:url('https://images.unsplash.com/photo-1587248720327-8eb72564be1e?q=80&w=1600&auto=format&fit=crop')"></div><div class="gallery__caption"><span>nr. 01</span> Tort cu trandafir și fistic</div></div>
+        <div class="swiper-slide gallery__slide"><div class="gallery__image" style="background-image:url('https://images.unsplash.com/photo-1464195244916-405fa0a82545?q=80&w=1600&auto=format&fit=crop')"></div><div class="gallery__caption"><span>nr. 02</span> Biscuiți cu unt rumenit</div></div>
+        <div class="swiper-slide gallery__slide"><div class="gallery__image" style="background-image:url('https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1600&auto=format&fit=crop')"></div><div class="gallery__caption"><span>nr. 03</span> Macarons de dimineață</div></div>
+        <div class="swiper-slide gallery__slide"><div class="gallery__image" style="background-image:url('https://images.unsplash.com/photo-1519915028121-7d3463d20b13?q=80&w=1600&auto=format&fit=crop')"></div><div class="gallery__caption"><span>nr. 04</span> Prăjitură cu căpșuni</div></div>
+        <div class="swiper-slide gallery__slide"><div class="gallery__image" style="background-image:url('https://images.unsplash.com/photo-1486427944299-d1955d23e34d?q=80&w=1600&auto=format&fit=crop')"></div><div class="gallery__caption"><span>nr. 05</span> Tărticele</div></div>
+        <div class="swiper-slide gallery__slide"><div class="gallery__image" style="background-image:url('https://images.unsplash.com/photo-1562440499-64c9a111f713?q=80&w=1600&auto=format&fit=crop')"></div><div class="gallery__caption"><span>nr. 06</span> Cremă de lavandă</div></div>
+        <div class="swiper-slide gallery__slide"><div class="gallery__image" style="background-image:url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1600&auto=format&fit=crop')"></div><div class="gallery__caption"><span>nr. 07</span> Felie de tort cu miere</div></div>
+        <div class="swiper-slide gallery__slide"><div class="gallery__image" style="background-image:url('https://images.unsplash.com/photo-1455853828816-0c301a011711?q=80&w=1600&auto=format&fit=crop')"></div><div class="gallery__caption"><span>nr. 08</span> Colțul cu croissant</div></div>
+      </div>
+    </div>
+
+    <div class="container gallery__controls">
+      <button class="gallery__btn" id="galleryPrev" aria-label="Slide anterior">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m11 5-7 7 7 7"/></svg>
+      </button>
+      <button class="gallery__btn" id="galleryNext" aria-label="Slide următor">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ VISIT CTA ============ -->
+  <section class="visit" id="visit">
+    <div class="container visit__card">
+      <div class="visit__content" data-reveal>
+        <p class="section__eyebrow section__eyebrow--light">Treci să ne saluți</p>
+        <h2 class="section__title section__title--light">
+          Ceainicul fierbe,<br/>cuptorul e <em>cald.</em>
+        </h2>
+        <p class="visit__text">
+          Deschidem la ora 8, închidem când ultimul croissant își găsește
+          casa. Avem o mică terasă, un câine foarte dulce și, de obicei,
+          ceva proaspăt scos din cuptor.
+        </p>
+        <div class="visit__cta">
+          <a href="menu.html" class="btn btn--cream btn--lg">
+            <span>Vezi meniul</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+          </a>
+          <a href="tel:+40745123456" class="btn btn--outline-light btn--lg">Sună-ne</a>
+        </div>
+      </div>
+
+      <div class="visit__float" aria-hidden="true">
+        <div class="visit__cookie visit__cookie--1">🍪</div>
+        <div class="visit__cookie visit__cookie--2">🧁</div>
+        <div class="visit__cookie visit__cookie--3">🍰</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">Feliciuca</a>
+        <p class="footer__tag">Clipe mărunte, făcute dulce.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Găsește-ne</h4>
+        <p>Strada Dulce 17<br/>Sector 2, București<br/>România</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Program</h4>
+        <ul>
+          <li><span>Lun – Vin</span><span>8:00 – 20:00</span></li>
+          <li><span>Sâmbătă</span><span>9:00 – 21:00</span></li>
+          <li><span>Duminică</span><span>9:00 – 16:00</span></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <p>
+          <a href="tel:+40745123456">+40 745 123 456</a><br/>
+          <a href="mailto:salut@feliciuca.ro">salut@feliciuca.ro</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> Atelierul de Patiserie Feliciuca · Copt cu drag.</p>
+      <p class="footer__small">Toate fotografiile de aici sunt cu scop de prezentare.</p>
+    </div>
+  </footer>
+
+  <!-- Swiper JS (MIT) -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
